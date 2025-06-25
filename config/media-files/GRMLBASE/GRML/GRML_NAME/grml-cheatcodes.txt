@@ -76,6 +76,8 @@ grml ip=...                           Standard Linux kernel ip= boot option. Arg
                                       clientip:nfsserverip:gwip:netmask:hostname:device:autoconf
                                       Valid values for autoconf: off, on, dhcp, bootp, rarp, both.
                                       Almost everything is optional. Most common form: ip=dhcp
+grml clientid                         Enabled clientid and disable duid in dhcpcd.conf to use the
+                                      mac-address for dhcp requests.
 grml mypath=...                       Add specified option into $PATH of Zsh
                                       For example when using "grml mypath=/foobar" then /foobar
                                       will be added to the end of $PATH inside Zsh

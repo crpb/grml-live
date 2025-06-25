@@ -53,6 +53,8 @@ checkvalue "$CONFIG_FSTAB" && config_fstab
 
 checkvalue "$CONFIG_CPU" && config_cpu
 
+checkvalue "$CONFIG_CLIENTID" && config_clientid
+
 checkvalue "$CONFIG_SSH" && config_ssh
 
 checkvalue "$CONFIG_VNC" && config_vnc
