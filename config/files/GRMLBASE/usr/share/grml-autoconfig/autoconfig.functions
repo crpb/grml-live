@@ -1445,5 +1445,22 @@ config_easteregg() {
 }
 # }}}
 
+# {{{ DHCPCD Client-ID
+config_clientid() {
+if checkbootparam 'clientid' ; then
+  if test -f /etc/dhcpcd.conf; then
+    sed -i \
+      '/^#clientid/ s/^#// ;
+      s/^duid/#&/ ;
+      /slaac hwaddr/ s/^#// ;
+      s/^slaac private/#&/ ; ' \
+      /etc/dhcpcd.conf
+    dhcpcd --rebind
+    logger -t grml-autoconfig 'Configured dhcpcd to use the clientid.'
+  fi
+fi
+}
+# }}}
+
 ## END OF FILE #################################################################
 # vim:foldmethod=marker expandtab ai ft=bash shiftwidth=2
