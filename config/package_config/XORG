@@ -24,3 +24,5 @@ xterm
 links2
 # smooth cursor themes:
 xcursor-themes
+# change display resolution in a few clicks:
+arandr
