@@ -76,6 +76,7 @@ mmdebstrap
 atftp
 bridge-utils
 ethtool
+fping
 ifenslave
 ifupdown
 iperf3
