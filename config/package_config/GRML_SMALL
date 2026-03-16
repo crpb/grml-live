@@ -1,5 +1,6 @@
 PACKAGES install
 
+grml-paste
 grml-quickconfig-standard
 
 # base os
